@@ -1,0 +1,145 @@
+        :root {
+            --azul-escuro: #1E3A8A;
+            --laranja: #F59E0B;
+            --branco: #FFFFFF;
+            --cinza-claro: #F3F4F6;
+            --cinza-escuro: #333;
+        }
+
+        body, h1, h2, h3, p, form, label, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--cinza-claro);
+            color: var(--cinza-escuro);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--laranja);
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: var(--branco);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+        }
+
+        h2 {
+            color: var(--azul-escuro);
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .speakers img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .speaker {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .speaker-info {
+            max-width: 600px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="email"], input[type="radio"], input[type="checkbox"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: var(--azul-escuro);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: var(--azul-escuro);
+            color: var(--branco);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--laranja);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+
+            section {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .speaker {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .speaker img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .form-container {
+                padding: 10px;
+            }
+
+            button {
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+            }
+
+            .speaker-info {
+                max-width: 100%;
+            }
+
+            input[type="text"], input[type="email"], button {
+                font-size: 14px;
+            }
+        }
